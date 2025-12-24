@@ -1,0 +1,94 @@
+import os
+
+# Define remaining files with basic content
+remaining_files = {
+    # Alumni pages
+    "pages/Alumni/2_Profile.py": '''import streamlit as st
+
+def show():
+    st.title("👤 Alumni Profile")
+    st.info("Alumni Profile page - Coming Soon!")
+''',
+    
+    "pages/Alumni/3_Networking.py": '''import streamlit as st
+
+def show():
+    st.title("🤝 Networking")
+    st.info("Networking page - Coming Soon!")
+''',
+    
+    "pages/Alumni/4_Chat.py": '''import streamlit as st
+
+def show():
+    st.title("💬 Alumni Chat")
+    st.info("Alumni Chat page - Coming Soon!")
+''',
+    
+    "pages/Alumni/5_Groups.py": '''import streamlit as st
+
+def show():
+    st.title("👥 Alumni Groups")
+    st.info("Alumni Groups page - Coming Soon!")
+''',
+    
+    "pages/Alumni/6_Events.py": '''import streamlit as st
+
+def show():
+    st.title("📅 Alumni Events")
+    st.info("Alumni Events page - Coming Soon!")
+''',
+    
+    "pages/Alumni/7_Contributions.py": '''import streamlit as st
+
+def show():
+    st.title("💰 Contributions")
+    st.info("Contributions page - Coming Soon!")
+''',
+    
+    "pages/Alumni/8_Settings.py": '''import streamlit as st
+
+def show():
+    st.title("⚙️ Alumni Settings")
+    st.info("Alumni Settings page - Coming Soon!")
+''',
+    
+    # Admin pages
+    "pages/Admin/3_Alumni_Management.py": '''import streamlit as st
+
+def show():
+    st.title("👨‍🎓 Alumni Management")
+    st.info("Alumni Management page - Coming Soon!")
+''',
+    
+    "pages/Admin/4_Announcements.py": '''import streamlit as st
+
+def show():
+    st.title("📢 Announcements")
+    st.info("Announcements page - Coming Soon!")
+''',
+    
+    "pages/Admin/6_Groups_Management.py": '''import streamlit as st
+
+def show():
+    st.title("👥 Groups Management")
+    st.info("Groups Management page - Coming Soon!")
+''',
+    
+    "pages/Admin/7_Analytics.py": '''import streamlit as st
+
+def show():
+    st.title("📊 Analytics Dashboard")
+    st.info("Analytics Dashboard - Coming Soon!")
+'''
+}
+
+# Create directories and files
+for file_path, content in remaining_files.items():
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    
+    with open(file_path, 'w') as f:
+        f.write(content)
+    
+    print(f"Created: {file_path}")
+
+print("✅ All files created successfully!")
